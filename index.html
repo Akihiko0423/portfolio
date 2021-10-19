@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  </head>
+    
+  <body>
+    <header class = "l-header p-header">
+      <div class = "p-header__inner">
+        <h1 class = "p-header__inner--logo">logo</h1>
+        <div class="p-header__inner--btn c-hamburger-menu">
+          <span class="c-hamburger-menu__line"></span>
+        </div>
+        <nav class = "p-header__inner--nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Price</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class = "p-main-visual">
+        <video id="bg-video" src="video/video.mp4" loop autoplay muted></video>
+        <img src="img/main-visual.jpg" alt="main-visual">
+        <h1>Akihiko<br>Webコーディング</h1>
+      </div>
+      <section id = "about" class = "p-about">
+        <div class = "p-about__inner">
+          <h2>About Me</h2>
+          <div class = "p-about__inner__detail">
+            <img src="img/my-profile.jpg" alt="myprofile">
+            <p>はじめまして。鳥取県出身の理系大学生、Akihikoです。<br>
+              現在は岡山大学の工学部に在籍しており、通信についての勉強をしております。<br>
+              2021年6月よりWebサイト制作の学習を始め、
+              主にコーディングやWordPress製作を受注しています。<br>
+              またTwitterの方でも学習記録やWeb製作に関する情報を発信しています。
+              どうぞよろしくお願いいたします。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class = "p-skills">
+        <div class = "p-skills__inner">
+          <h2>Skills</h2>
+          <div class = "p-skills__inner__detail">
+              <ul class = "p-skills-list">
+                <li>
+                  <i class="fab fa-html5 fa-10x"></i>
+                  <p>HTML</p>
+                </li>
+                <li>
+                  <i class="fab fa-css3-alt fa-10x"></i>
+                  <p>CSS</p>
+                </li>
+                <li>
+                  <i class="fab fa-sass fa-10x"></i>
+                  <p>Sass</p>
+                </li>
+                <li>
+                  <i class="icon-icon-jquery fa-7x"></i>
+                  <p>jQuery</p>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </section>
+      <section class = "p-works">
+
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

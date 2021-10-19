@@ -1,0 +1,52 @@
+@use "../../foundation/mixin" as v;
+
+.p-about{
+    margin-bottom:100px;
+    &__inner{
+        margin:0 auto;
+        width:70%;
+        h2{
+            padding-top:100px;
+            font-size:48px;
+            position:relative;
+            margin-bottom:100px;
+            width:300px;
+            @include v.smafo{
+                font-size:28px;
+            }
+            &::after{
+                @include v.cubic-bezier;
+                width:240px;
+                @include v.smafo{
+                    width:145px;
+                }
+            }
+            &:hover::after{
+                @include v.cubic-bezier_hover;
+            }
+        }
+        &__detail{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                border-radius: 50%;
+                border:5px solid black;
+                width:30%;
+                @include v.tab{
+                    width:75%;
+                    margin:0 auto 40px;
+                }
+            }
+            p{
+                width:65%;
+                @include v.tab{
+                    width:100%;
+                }
+            }
+            @include v.tab{
+                display:block; 
+            }
+        }
+    }
+}

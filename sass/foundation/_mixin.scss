@@ -1,0 +1,36 @@
+@charset "UTF-8";
+$tab: 1024px;       //タブレットの最大幅
+$smafo:599px;       //スマートフォンの最大幅
+
+@mixin tab {
+    @media (max-width: ($tab)) {     //画面サイズが1024以下の時にタブレット
+        @content;
+    }
+}
+
+@mixin smafo {
+    @media (max-width: ($smafo)) {    //画面サイズが599以下の時スマフォ
+        @content;
+    }
+}
+
+@mixin cubic-bezier{
+    content:"";
+    height:2px;
+    background-color:black;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    transform-origin: 0 50% 0;
+    transform: scaleX(1);
+    transition: transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    transition: transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+@mixin cubic-bezier_hover{
+    transform-origin: 100% 50% 0;
+    transform: scaleX(0);
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0s, -webkit-transform 0.45s;
+    transition: transform 0.45s, cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    transition: transform 0.45s, cubic-bezier(0.215, 0.61, 0.355, 1) 0s, -webkit-transform 0.45s;   
+}

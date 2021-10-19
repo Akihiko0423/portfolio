@@ -1,0 +1,48 @@
+
+/* ハンバーガーメニュー */
+.c-hamburger-menu{
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 10;
+    &__line{
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: black;
+        position: relative;
+        transition: all 0.5s;
+        &::before,&::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: black;
+            position: absolute;
+            transition: all 0.5s;
+        }
+        &::before{
+            transform: translateY(-12px);
+        }
+        &::after{
+            transform: translateY(12px);
+        }
+    }
+}
+
+  
+  
+  .c-hamburger-menu.open .c-hamburger-menu__line{
+    background-color: transparent;
+  }
+  
+  .c-hamburger-menu.open .c-hamburger-menu__line::before{
+    transform: rotate(45deg);
+  }
+  .c-hamburger-menu.open .c-hamburger-menu__line::after{
+    transform: rotate(-45deg);
+  }
