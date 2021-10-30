@@ -1,7 +1,10 @@
 @use "../../foundation/mixin" as v;
 
 .p-about{
-    margin-bottom:100px;
+    padding-bottom:100px;
+    @include v.smafo{
+        padding-bottom:0px;
+    }
     &__inner{
         margin:0 auto;
         width:70%;

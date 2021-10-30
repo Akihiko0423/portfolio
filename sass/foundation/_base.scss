@@ -16,5 +16,12 @@ body{
   font-family:'MS Pゴシック',sans-serif;
 }
 
+//fadeinの初期設定
+.fadein{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
 
 

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+$skills-break:1200px;   //skill sectionのbreakpoint
 $tab: 1024px;       //タブレットの最大幅
 $smafo:599px;       //スマートフォンの最大幅
 
@@ -13,6 +14,14 @@ $smafo:599px;       //スマートフォンの最大幅
         @content;
     }
 }
+
+@mixin skill {
+    @media (max-width: ($skills-break)) {    //画面サイズが1200以下の時スマフォ
+        @content;
+    }
+}
+
+
 
 @mixin cubic-bezier{
     content:"";

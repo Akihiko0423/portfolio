@@ -1,15 +1,18 @@
 @use "../../foundation/mixin" as v;
 .p-skills{
-    margin-bottom:300px;
+    padding-bottom:100px;
+    @include v.smafo{
+        padding-bottom:0;
+    }
     &__inner{
         margin:0 auto;
         width:70%;
         h2{
             padding-top:100px;
             font-size:48px;
-            position:relative;
             margin-bottom:50px;
             width:300px;
+            position:relative;
             @include v.smafo{
                 font-size:28px;
             }
@@ -25,18 +28,50 @@
             }
         }
         &__detail{
+            @include v.smafo{
+                padding-bottom:30px;
+            }
             .p-skills-list{
                 display:flex;
+                flex-wrap:wrap;
                 justify-content: space-between;
-                li{
-                    width:200px;
-                    height:230px;
-                    text-align: center;
-                    img{
-                        object-fit: cover;
+                margin-bottom:50px;
+                @include v.skill{
+                    margin-bottom:0px;
+                }
+                @include v.smafo{
+                    flex-direction: column;
+                }
+                li{  
+                    @include v.skill{
+                        width:50%;
+                        margin-bottom:30px;
                     }
-                    p{
-                        font-size:20px;
+                    @include v.smafo{
+                        width:100%;
+                    }                      
+                    .p-skills-list__item{
+                        width:200px;
+                        height:200px;
+                        border:3px solid black;
+                        border-radius: 50%;
+                        text-align: center;
+                        margin:0 auto;
+                        @include v.smafo{
+                            margin:0 auto 20px;
+                        }
+                        .c-icon{
+                            width:150px;
+                            height:150px;
+                            padding-top:30px;
+                        }
+                        .jquery{
+                            margin:0 auto;
+                            object-fit: cover;
+                        }
+                        p{
+                            font-size:20px;
+                        }
                     }
                 }
             }

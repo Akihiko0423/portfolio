@@ -1,0 +1,92 @@
+@use "../../foundation/mixin" as v;
+
+.p-works{
+    padding-bottom:100px;
+    @include v.smafo{
+        padding-bottom:50px;
+    }
+    &__inner{
+        h2{
+            padding-top:100px;
+            font-size:48px;
+            position:relative;
+            width:300px;
+            margin-bottom:50px;
+            margin-left:15%;
+            @include v.tab{
+                width:70%;
+            }
+            @include v.smafo{
+                font-size:28px;
+            }
+            &::after{
+                @include v.cubic-bezier;
+                width:240px;
+                @include v.smafo{
+                    width:145px;
+                }
+            }
+            &:hover::after{
+                @include v.cubic-bezier_hover;
+            }
+        }
+        &__detail{
+            width:70%;
+            margin:0 auto;
+            @include v.tab{
+                width:90%;
+            }
+            .p-card{
+                background-color: rgb(255, 255, 255);
+                margin-bottom:40px;
+                display:flex;
+                padding:40px 20px;
+                justify-content: space-between;
+                @include v.tab{
+                    flex-direction: column;
+                }
+                &__visual{
+                    width:50%;
+                    @include v.tab{
+                        width:100%;
+                    }
+                    img{
+                        width:100%;
+                        height:100%;
+                    }
+                }
+                &__text{
+                    width:45%;
+                    @include v.tab{
+                        width:100%;
+                        padding-top:20px;
+                    }
+                    h3{
+                        font-size:28px;
+                        padding-bottom:30px;
+                        @include v.smafo{
+                            font-size:6vw;
+                        }
+                    }
+                    &__btn{
+                        margin-top:100px;
+                        margin-left:20%;
+                        border:1px solid black;
+                        @include v.tab{
+                            width:150px;
+                            margin:50px auto 0px;
+                        }
+                        &:hover{
+                            opacity:0.7;
+                        }
+                        a{
+                            display:inline-block;
+                            width:100%;
+                            line-height: 76px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,8 @@
 // Layout
 // ==========================================================================
 
-
+@use "layout/_main";
+@use "layout/_footer";
 
 // ==========================================================================
 // Object
@@ -21,6 +22,8 @@
 // -----------------------------------------------------------------
 
 @use "object/component/_hamburger-menu";
+@use "object/component/_c-button";
+@use "object/component/_c-icon";
 
 // -----------------------------------------------------------------
 // Project
@@ -31,6 +34,7 @@
 @use "object/project/_about";
 @use "object/project/_skills";
 @use "object/project/_works";
+@use "object/project/_price";
 @use "object/project/_contact";
 
 
