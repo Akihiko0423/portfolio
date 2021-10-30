@@ -55,6 +55,7 @@ jQuery(function($) {
           $(this).css('opacity','1');
           $(this).css('transform','translateY(0)');
         }
+        //twitter-iconなどの表示
         if(scroll > 600){
           $('.c-footer-link').css('opacity','1');
           $('.c-footer-link').css('transform','translateY(0)');
